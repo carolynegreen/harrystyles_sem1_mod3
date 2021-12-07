@@ -1,0 +1,163 @@
+/*grid area*/
+body {
+    display: grid;
+    grid-template-areas:
+        "hd hd hd hd"
+        "ma ma ma ma";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-area: hd;
+}
+
+main {
+    grid-area: ma;
+    display: grid;
+    grid-template-areas:
+        ". . as as"
+        "c1 c1 ea ea"
+        "oc oc od od"
+        "nc nc no no";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 1%;
+
+}
+
+.aboutsection {
+    grid-area: as;
+}
+
+.collage1 {
+    grid-area: c1
+}
+
+.early {
+    grid-area: ea
+}
+
+.now {
+    grid-area: no
+}
+
+/*styling header*/
+header {
+    background-color: #F1ADAD;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#logo {
+    max-width: 100%;
+    float: left;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 32px;
+    color: white;
+    text-shadow: 2px 2px #000;
+}
+
+#about {
+    color: black;
+    text-shadow: none;
+}
+
+/*styling main*/
+.about-textbox {
+    padding: 10px
+}
+
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 32px;
+}
+
+.about_nav {
+    display: flex;
+    column-gap: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+
+}
+
+.about_nav a {
+    color: black;
+    background-color: #F1ADAD;
+}
+
+h2 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 1%;
+}
+
+#youtubelink {
+    color: black;
+    background-color: #F1ADAD;
+}
+
+#youtubelink2 {
+    color: black;
+    background-color: #F1ADAD;
+}
+
+/*images*/
+div img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*grid layout*/
+.onedirection {
+    grid-area: od;
+}
+
+.onedirectioncollage {
+    grid-area: oc;
+}
+
+.nowcollage {
+    grid-area: nc;
+}
+
+@media only screen and (max-width: 550px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            "c1"
+            "as"
+            "ea"
+            "od"
+            "oc"
+            "no"
+            "nc";
+        grid-template-columns: 1fr;
+    }
+}

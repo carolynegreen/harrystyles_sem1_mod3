@@ -1,0 +1,133 @@
+/*grid area*/
+body {
+    display: grid;
+    grid-template-areas:
+        "hd hd hd hd"
+        "ma ma ma ma";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header {
+    grid-area: hd;
+    background-color: #F1ADAD;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-area: hd;
+}
+
+main {
+    margin: 1%;
+    grid-area: ma;
+    display: grid;
+    grid-template-areas:
+        "hs hs im im"
+        "fl fl im2 im2";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.HS-album {
+    grid-area: hs
+}
+
+.finelines-album {
+    grid-area: fl
+}
+
+.images {
+    margin-left: 1%;
+    grid-area: im;
+}
+
+.images2 {
+    margin-left: 1%;
+    grid-area: im2;
+}
+
+/*styling header*/
+#logo {
+    max-width: 100%;
+    float: left;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 32px;
+    color: white;
+    text-shadow: 2px 2px #000;
+}
+
+#music {
+    color: black;
+    text-shadow: none;
+}
+
+/*text styling*/
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 32px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 30px
+}
+
+cite {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+#youtubelink {
+    color: black;
+    background-color: #F1ADAD;
+}
+
+#youtubelink2 {
+    color: black;
+    background-color: #F1ADAD;
+}
+
+#youtubelink3 {
+    color: black;
+    background-color: #F1ADAD;
+}
+
+/*images*/
+div img {
+    max-width: 100%;
+}
+
+.harrystylescollage {
+    width: 100%;
+}
+
+@media only screen and (max-width: 550px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            "hs"
+            "im"
+            "fl"
+            "im2";
+        grid-template-columns: 1fr;
+    }
+}

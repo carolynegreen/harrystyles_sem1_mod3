@@ -1,0 +1,23 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "hd"
+        "ma";
+}
+
+header {
+    grid-area: hd;
+    padding-left: 5%;
+}
+
+main {
+    grid-area: ma;
+    display: flex;
+    justify-content: center;
+
+}
+
+#entersite {
+    max-width: 100%;
+    height: auto;
+}
